@@ -1,16 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de Médias</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 450px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        form, .resultado {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            background: #087f5b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .resultado {
+            margin-top: 20px;
+        }
+        @media (max-width: 480px) {
+    body {
+        margin: 0 auto;
+        padding: 12px;
+    }
+
+    form,
+    .resultado {
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+    </style>
 </head>
+
 <body>
-    <fieldset>
-        <form>
-            <p>Insira a primeira nota: </p>
-            <input placeholder="20">
-        </form>
-    </fieldset>
+
+    <h2><center> Médias Calculator</center></h2>
+
+    <form id="formulario">
+
+        <label for="nota1">Insira a primeira nota</label>
+        <input type="number" id="nota1" 
+                min="0" step="any" required max="20">
+
+        <label for="nota2">Insira a segunda nota</label>
+        <input type="number" id="nota2"
+               min="0" step="any" required max="20">
+
+        <label for="nota3">Insira a terceira nota</label>
+        <input type="number" id="nota3"
+               min="0" step="any" required max="20">
+
+        <button type="submit">Calcular média</button>
+
+    </form>
+
+    <div class="resultado" id="resultado" hidden>
+        <h3>Resultado</h3>
+        <p id="nota1Resultado"></p>
+        <p id="nota2Resultado"></p>
+        <p id="nota3Resultado"></p>
+        <h3 id="mediaResultado"></h3>
+    </div>
+
+    <script src="media.js">
+    </script>
+
 </body>
 </html>
