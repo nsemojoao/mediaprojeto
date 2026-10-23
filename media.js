@@ -22,7 +22,7 @@ formulario.addEventListener("submit", function(event) {
         "Terceira nota " + nota3 + " val";
 
     document.getElementById("mediaResultado").textContent =
-        "Média " + media + " val";
+        "Média " + media.toFixed(2).replace + " val";
 
     document.getElementById("resultado").hidden = false;
 })
